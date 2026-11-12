@@ -8,9 +8,11 @@ you approving in the app.
 ## Install
 
 ```
-/plugin marketplace add sakredapp/runmyads-plugin
+/plugin marketplace add https://runmyads.com/claude/marketplace.json
 /plugin install runmyads@runmyads
 ```
+
+(Adding this repo directly also works: `/plugin marketplace add` with this repo's GitHub address.)
 
 The first time Claude uses a Run My Ads tool, it asks you to sign in with your Run My Ads
 account and press Allow. There is no key to paste. You need a Run My Ads account.
@@ -23,7 +25,7 @@ Then try:
 
 The connector address is `https://app.runmyads.com/mcp/rma`. Add it as a custom connector in
 Claude or ChatGPT and sign in. For a connection that can only read, use
-`https://app.runmyads.com/mcp/rma/read`. Help: https://runmyads.com/docs/connect-ai-agent
+`https://app.runmyads.com/mcp/rma/read`. More: https://runmyads.com/for-ai-agents
 
 ## What is here
 

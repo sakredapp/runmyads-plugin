@@ -8,6 +8,6 @@ draft you approve in the app, and paid work shows its price first.
 Install from the marketplace at the repo root:
 
 ```
-/plugin marketplace add sakredapp/runmyads-plugin
+/plugin marketplace add https://runmyads.com/claude/marketplace.json
 /plugin install runmyads@runmyads
 ```
