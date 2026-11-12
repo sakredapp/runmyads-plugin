@@ -1,0 +1,15 @@
+{
+  "name": "runmyads",
+  "description": "The Run My Ads plugin for Claude Code: read and run your Facebook and Instagram ads with Ados from your own chat.",
+  "owner": { "name": "Run My Ads", "url": "https://runmyads.com" },
+  "plugins": [
+    {
+      "name": "runmyads",
+      "source": "./plugins/runmyads",
+      "displayName": "Run My Ads",
+      "description": "Adds the Run My Ads connector (sign in with your Run My Ads account) and a skill that teaches your AI how to work with Ados.",
+      "category": "marketing",
+      "keywords": ["ads", "facebook-ads", "meta-ads", "instagram", "marketing", "runmyads", "ados"]
+    }
+  ]
+}

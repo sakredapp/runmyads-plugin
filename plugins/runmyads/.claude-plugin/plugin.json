@@ -1,0 +1,15 @@
+{
+  "name": "runmyads",
+  "displayName": "Run My Ads",
+  "description": "Read and run your Facebook and Instagram ads with Ados from Claude Code. Adds the Run My Ads connector (you sign in with your Run My Ads account, no key to paste) and a skill that teaches the working flow.",
+  "version": "0.1.0",
+  "author": { "name": "Run My Ads", "url": "https://runmyads.com" },
+  "homepage": "https://runmyads.com",
+  "keywords": ["ads", "facebook-ads", "meta-ads", "instagram", "marketing", "runmyads", "ados"],
+  "mcpServers": {
+    "runmyads": {
+      "type": "http",
+      "url": "https://app.runmyads.com/mcp/rma"
+    }
+  }
+}
