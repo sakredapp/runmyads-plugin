@@ -1,6 +1,6 @@
 ---
 name: klipstr
-description: Use this whenever the person wants to clip videos with Klipstr from this chat - find what is trending to clip, turn a long video, stream or podcast into short vertical clips, check how a clipping job is going, fix a clip, post or schedule clips to their connected accounts, follow creators, or see how posted clips did - or whenever they mention Klipstr, klipping or clipping. It explains how the Klipstr tools fit together and the daily routine. Load it before calling any clipping tool.
+description: Run clipping with Klipstr - find trending videos, clip links into short vertical clips, fix and post them, check results. Use when the person mentions Klipstr, klipping or clipping.
 ---
 
 # Clipping with Klipstr
