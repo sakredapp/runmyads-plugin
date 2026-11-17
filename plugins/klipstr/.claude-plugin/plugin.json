@@ -1,0 +1,15 @@
+{
+  "name": "klipstr",
+  "displayName": "Klipstr",
+  "description": "Clip long videos, streams and podcasts into short vertical clips and post them, from Claude Code. Adds the connector (sign in with your account, no key to paste) and a skill that teaches the clipping routine.",
+  "version": "0.1.0",
+  "author": { "name": "Run My Ads", "url": "https://runmyads.com" },
+  "homepage": "https://runmyads.com",
+  "keywords": ["clipping", "clips", "shorts", "reels", "tiktok", "streams", "podcasts", "klipstr"],
+  "mcpServers": {
+    "runmyads": {
+      "type": "http",
+      "url": "https://app.runmyads.com/mcp/rma"
+    }
+  }
+}

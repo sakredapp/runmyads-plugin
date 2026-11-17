@@ -1,6 +1,6 @@
 ---
 name: klipstr
-description: Run clipping with Klipstr - find trending videos, clip links into short vertical clips, fix and post them, check results. Use when the person mentions Klipstr, klipping or clipping.
+description: Run clipping with Klipstr - find trending videos, clip links into short vertical clips, trim and post them, check results. Use when the person mentions Klipstr, klipping or clipping.
 ---
 
 # Clipping with Klipstr
@@ -31,9 +31,11 @@ time a tool is used. If you see `load_toolset` but no clipping tools, call
 1. **The rights question is the person's to answer.** When `start_clipping` on a Trending
    item returns a question, ask the person that exact question and wait. Only their own yes
    counts. Never answer it for them, never assume it, and never carry a yes from one video to
-   another. A link the person pasted themselves has no question.
+   another. A link the person pasted themselves has no question. If the tool says clipping a
+   Trending pick is not available from chat, send the person to Klip this on the Clipping page.
 2. **Preview before posting.** Call `post_clips` without `confirm` first, show the person what
-   goes where and when, and post with `confirm: true` only after they say yes.
+   goes where and when, and post with `confirm: true` and the preview's `confirm_token` only
+   after they say yes to that preview. If anything changes, preview again.
 3. **Warnings are the person's call.** If posting returns a warning (for example the same clip
    was already posted to that account), tell them in your own words. Send `post_anyway: true`
    only if they say to.
@@ -50,18 +52,23 @@ caption look.
 
 ## The daily routine
 1. `list_clips`: what is running and what is ready.
-2. `list_trending_videos` for their niche: suggest up to three to clip, with views and age.
+2. `list_trending_videos` for their niche: suggest up to three to clip, with views and age,
+   and pass on the rights notice the tool returns.
 3. `start_clipping` for each one they pick (relay the rights question for Trending items).
 4. When ready, `list_clips` with the `source_ref`: show each clip's headline, length, why it
-   was picked and its grade, with the watch link. Offer changes.
+   was picked and whether it passed its checks (with the reason if not), with the watch link.
+   Offer to move a start or end by one sentence, or remove a clip.
 5. `post_clips`: preview, then post or schedule after their yes.
 6. Next day: `get_clip_results`, then say which clips did best and suggest more like them.
 
-"Clip this and post it" should be one flow: start, check until ready, show the clips, preview
-the post, post on their yes.
+"Clip this and post it" is one request, but it still holds the person's own answers: their
+rights answer for a Trending pick, then their yes to the post preview. An earlier "post it"
+is neither. Never show the person refs or keys; they are for tool calls only.
 
 ## What a good clip looks like
-Use this when you suggest which clips to post or what to change.
+You cannot change layout, titles, caption look or effects from chat; the only changes are
+moving a clip's start or end by one sentence, removing a clip, or bringing it back. Use this
+to choose which videos to clip and which clips to post, not to promise edits.
 - A clip is a person people follow plus the thing they are doing or reacting to. Trailers,
   promos and footage with nobody in it are not clips.
 - Short wins: most good clips are 30 seconds or less. Streams 8-45 s; fight edits and
